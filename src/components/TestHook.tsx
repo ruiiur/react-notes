@@ -1,5 +1,6 @@
 // useState useEffect 的使用
 import React, { useEffect, useState } from 'react';
+import TestContext from './TestContext';
 
 const TestHook = (props: any) => {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ const TestHook = (props: any) => {
   return (
     <div>
       <p>这是{count}</p>
+      <TestContext/>
       <button onClick={changeCount}>按钮</button>
     </div>
   )

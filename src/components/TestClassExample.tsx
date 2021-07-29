@@ -25,8 +25,8 @@ class Example extends Component
   render() {
     return (
       <div>
-        <p>这是class组件</p>
-        <button onClick={this.changeCount}>按钮</button>
+        <p>这是class组件 {(this.state as any).count}</p>
+        <button onClick={this.changeCount}>class按钮</button>
       </div>
     )
   }
