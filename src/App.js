@@ -15,6 +15,8 @@ import TestHook from './components/TestHook';
 import TestClassExample from './components/TestClassExample';
 import CustomHookTest from './components/CustomHookTest';
 import TestReducer from './components/TestReducer';
+import PortalsParent from './components/PortalsParent';
+import TestLazy from './components/TestLazy';
 import { ThemeContext } from './utils/themeContext';
 // import Login from './components/login.tsx';
 console.log(ThemeContext, 'ThemeContext');
@@ -33,12 +35,13 @@ function App() {
     <div className="App">
       <ThemeContext.Provider value={num}>
         <TestHook/>
-
         <button ref={buttonRef} onClick={changeThemes}>按钮App</button>
       </ThemeContext.Provider>
       <TestClassExample ref={testClassRef}/>
       <CustomHookTest/>
-      <TestReducer ref={testReducerRef}/>
+      <TestReducer/>
+      <PortalsParent/>
+      <TestLazy/>
     </div>
   );
 }
