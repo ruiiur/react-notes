@@ -17,7 +17,10 @@ import CustomHookTest from './components/CustomHookTest';
 import TestReducer from './components/TestReducer';
 import PortalsParent from './components/PortalsParent';
 import TestLazy from './components/TestLazy';
+import Compute from './components/Compute';
 import { ThemeContext } from './utils/themeContext';
+import { Provider } from 'react-redux';
+import store from './redux/index';
 // import Login from './components/login.tsx';
 console.log(ThemeContext, 'ThemeContext');
 function App() {
@@ -42,6 +45,9 @@ function App() {
       <TestReducer/>
       <PortalsParent/>
       <TestLazy/>
+      <Provider store={store}>
+        <Compute/>
+      </Provider>
     </div>
   );
 }
